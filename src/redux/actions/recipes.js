@@ -137,11 +137,13 @@ export const likeRecipe = (id) => (dispatch, getState) => {
 };
 
 
-export const saveRecipe = (id) => (dispatch, getState) => {
+export const saveRecipe = (user_id, id) => (dispatch, getState) => {
   dispatch({ type: RECIPE_LOADING });
 
+  const body = JSON.stringify({ id });
+
   axiosInstance
-    .post(`/recipe/${id}/bookmark/`, null, tokenConfig(getState))
+    .post(`/user/profile/${user_id}/bookmarks/`, body, tokenConfig(getState))
     .then((res) => {
       dispatch({
         type: SAVE_RECIPE,
@@ -153,7 +155,6 @@ export const saveRecipe = (id) => (dispatch, getState) => {
         type: GET_ERRORS,
         payload: err.response,
       });
-
     });
 };
 

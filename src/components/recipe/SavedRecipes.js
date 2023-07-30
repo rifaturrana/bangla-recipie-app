@@ -9,8 +9,10 @@ export default function SavedRecipes() {
 
   const { user, savedRecipes } = useSelector((state) => state.user);
 
+  console.log(savedRecipes);
+
   useEffect(() => {
-    dispatch(getSavedRecipes(user.id));
+    dispatch(getSavedRecipes(user && user.id));
   }, []);
 
   if (!savedRecipes)

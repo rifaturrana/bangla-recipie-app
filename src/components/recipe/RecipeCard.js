@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { HeartIcon, BookmarkIcon } from "@heroicons/react/outline";
@@ -12,7 +12,6 @@ export default function RecipeCard({ recipes, quickview }) {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
   const navigate = useNavigate();
-  console.log(recipes);
 
   return (
     <>
@@ -105,7 +104,7 @@ export default function RecipeCard({ recipes, quickview }) {
                         navigate("/login");
                       }
                       else {
-                        dispatch(saveRecipe(recipe.id));
+                        dispatch(saveRecipe(recipe.author, recipe.id));
 
                       }
                     }}

@@ -125,7 +125,7 @@ export default function QuickView({ open, setOpen, id }) {
                             className="group py-3 px-3 rounded-md flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
                             onClick={() => {
                               if (user !== null) {
-                                dispatch(saveRecipe(recipe[0].id));
+                                dispatch(saveRecipe(recipe[0].author, id));
                               }
                               else {
                                 alert("সংরক্ষণ করতে লগইন করুন");

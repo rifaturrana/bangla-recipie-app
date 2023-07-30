@@ -14,13 +14,11 @@ import Profile from "./components/accounts/Profile";
 import MyRecipes from "./components/recipe/MyRecipes";
 import SavedRecipes from "./components/recipe/SavedRecipes";
 
-import ErrorDiv from "./components/layouts/ErrorDiv";
 
 export default function App() {
   return (
     <Router>
       <Header />
-      {/* <ErrorDiv /> */}
       <Routes>
         <Route exact path="/about" element={<Landing />} />
         <Route exact path="/register" element={<Register />} />
@@ -75,7 +73,7 @@ export default function App() {
         />
         <Route
           exact
-          path="/saveRecipes"
+          path="/savedRecipes"
           element={
             <WithPrivateRoute>
               <SavedRecipes />

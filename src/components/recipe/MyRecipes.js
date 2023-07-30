@@ -10,7 +10,7 @@ export default function MyRecipes() {
   const { user, userRecipes } = useSelector((state) => state.user);
 
   useEffect(() => {
-    dispatch(getUserRecipes(user.username));
+    dispatch(getUserRecipes(user && user.username));
   }, []);
 
   if (!userRecipes)
