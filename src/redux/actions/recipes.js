@@ -88,6 +88,7 @@ export const editRecipe = (id, formData) => (dispatch, getState) => {
         type: EDIT_RECIPE,
         payload: res.data,
       });
+      toast.success("সফলভাবে রেসিপি সম্পাদন করা হয়েছে");
     })
     .catch((err) => {
       dispatch({
@@ -108,6 +109,7 @@ export const deleteRecipe = (id) => (dispatch, getState) => {
         type: DELETE_RECIPE,
         payload: res.data,
       });
+      toast.success("সফলভাবে রেসিপি মুছে ফেলা হয়েছে");
     })
     .catch((err) => {
       dispatch({
@@ -127,6 +129,7 @@ export const likeRecipe = (id) => (dispatch, getState) => {
         type: LIKE_RECIPE,
         payload: res.data,
       });
+      toast.success("সফলভাবে রেসিপি লাইক করা হয়েছে");
     })
     .catch((err) => {
       dispatch({
@@ -149,6 +152,7 @@ export const saveRecipe = (user_id, id) => (dispatch, getState) => {
         type: SAVE_RECIPE,
         payload: res.data,
       });
+      toast.success("সফলভাবে রেসিপি সংরক্ষণ করা হয়েছে");
     })
     .catch((err) => {
       dispatch({
