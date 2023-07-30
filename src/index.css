@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap');
+.custom-placeholder-font::placeholder {
+    font-family: 'Tiro Bangla', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #999999;
+  }
+
+  body {
+    font-family: 'Tiro Bangla', sans-serif;
+  }
