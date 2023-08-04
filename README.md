@@ -57,7 +57,7 @@ Users can like recipes to show their appreciation for the recipes they find inte
 The application includes toast notifications to provide feedback to users after various events, such as successful registration, login, or updating the profile.
 
 # Technologies Used
-## Backend
+## Backend (https://github.com/rifaturrana/bangla_recipe_api)
 Django
 MySQL database
 ## Frontend
